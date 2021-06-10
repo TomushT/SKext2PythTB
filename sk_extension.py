@@ -399,8 +399,8 @@ def set_hop_SK(model,atoms,n_at_i,n_at_j,lv,sss=0.,sps=0.,pss=0.,pps=0.,ppp=0.,s
 def set_SOC_onsite_p(model,atoms,soc):
     # set the onsite SOC of p-orbitals for all atoms
     # works only with spin
-    # my_model...TB model to add hoppings to
-    # atoms......the list of atoms and their Orbitals
+    # model......TB model to add SOC to
+    # atoms......the list of atoms and their orbitals
     # soc........the list of onsite SOC values
     
     # number of atoms
