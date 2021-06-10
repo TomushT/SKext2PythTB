@@ -16,46 +16,76 @@ Includes the routines necessary to define the Hamilton matrix with the Slater-Ko
 
 ### init_model_SK(dim_k,dim_r,lat,atoms)
 Initializes and returns the TB model defined with pythtb.tb_model
+
 **dim_k**: Dimensionality of reciprocal space, same as in pythtb_tb_model.
+
 **dim_r**: Dimensionality of real space, same as in pythtb_tb_model.
+
 **lat**: Array containing lattice vectors in Cartesian coordinates, same as in pythtb_tb_model
+
 **atoms**: List containing reduced coordinates of all atoms in the unit cell, the types of orbitals localized at the atom position, and their onsite energies. The orbitals are: 0=s, 1=p-x, 2=p-y, 3=p-z, 4=d-xy, 5=d-yz, 6=d-zx, 7=d-x^2-y^2, 8=d-3r^2-z^2.
 
 ### set_hop_SK(model,atoms,n_at_i,n_at_j,lv,sss=0.,sps=0.,pss=0.,pps=0.,ppp=0.,sds=0.,pds=0.,pdp=0.,dss=0.,dps=0.,dpp=0.,dds=0.,ddp=0.,ddd=0.)
 Set the hoppings according to the Slater-Koster parametrization.
+
 **model**: TB model to add hoppings to
+
 **atoms**: the list of atoms and their Orbitals
+
 **n_at_i**: number of atom_i in the list
+
 **n_at_j**: number of atom_j in the list
+
 **lv**: lattice vector connecting the atoms
+
 **SK parameters**:
+
   sss......ss-sigma
+
   sps......sp-sigma
+
   pss......ps-sigma
+
   pps......pp-sigma
+
   ppp......pp-pi
+
   sds......sd-sigma
+
   pds......pd-sigma
+
   pdp......pd-pi
+
   dss......ds-sigma
+
   dps......dp-sigma
+
   dpp......dp-pi
+
   dds......dd-sigma
+
   ddp......dd-pi
+
   ddd......dd-delta
 
 ### set_SOC_onsite_p(model,atoms,soc)
 Set the onsite SOC of p-orbitals for all atoms.
 Works only with spin.
+
 **model**: TB model to add hoppings to
+
 **atoms**: the list of atoms and their orbitals
+
 **soc**: the list of onsite SOC values
 
 ### set_SOC_onsite_d(model,atoms,soc)
 Set the onsite SOC of d-orbitals for all atoms.
 Works only with spin.
+
 **model**: TB model to add hoppings to
+
 **atoms**: the list of atoms and their orbitals
+
 **soc**: the list of onsite SOC values
 
 ## Examples
