@@ -17,11 +17,11 @@ Includes the routines necessary to define the Hamilton matrix with the Slater-Ko
 ### init_model_SK(dim_k,dim_r,lat,atoms)
 Initializes and returns the TB model defined with pythtb.tb_model
 
-**dim_k**: Dimensionality of reciprocal space, same as in pythtb_tb_model.
+**dim_k**: Dimensionality of reciprocal space, same as in pythtb.tb_model.
 
-**dim_r**: Dimensionality of real space, same as in pythtb_tb_model.
+**dim_r**: Dimensionality of real space, same as in pythtb.tb_model.
 
-**lat**: Array containing lattice vectors in Cartesian coordinates, same as in pythtb_tb_model
+**lat**: Array containing lattice vectors in Cartesian coordinates, same as in pythtb.tb_model
 
 **atoms**: List containing reduced coordinates of all atoms in the unit cell, the types of orbitals localized at the atom position, and their onsite energies. The orbitals are: 0=s, 1=p-x, 2=p-y, 3=p-z, 4=d-xy, 5=d-yz, 6=d-zx, 7=d-x^2-y^2, 8=d-3r^2-z^2.
 
